@@ -61,10 +61,15 @@ def main():
         print(str(i) + ": ", end="")
         puzzle[i-1] = list(map(int, input().split()))
 
-    print(solver(puzzle))
-    for row in puzzle:
-        for col in row:
-            print(col, end=" ")
-        print()
+    if solver(puzzle):
+        for row in puzzle:
+            for col in row:
+                print(col, end=" ")
+            print()
+    else:
+        print("Invalid Puzzle!!!!")
 
-main()
+
+if __name__ == "__main__":
+    main()
+
