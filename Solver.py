@@ -43,6 +43,7 @@ def solver(puzzle, start_row = 0, start_col = 0):
             if valid(puzzle, start_row, start_col):
                 if solver(puzzle, start_row+1 if start_col == 8 else start_row, 0 if start_col == 8 else start_col+1):
                     return True
+        puzzle[start_row][start_col] = 0
         return False
 
     else:
